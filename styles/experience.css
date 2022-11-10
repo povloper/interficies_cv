@@ -1,0 +1,36 @@
+.experience {
+    width: 100%;
+    background: #f3f3f3;
+}
+
+#experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 25px 0;
+}
+
+.experience-item {
+    margin: 25px 20px;
+}
+
+.experience-item span {
+    display: block;
+}
+
+.experience-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.experience-company {
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+@media (max-width: 768px) {
+    .experience-item {
+        margin-right: auto;
+    }
+}

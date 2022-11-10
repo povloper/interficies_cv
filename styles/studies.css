@@ -1,0 +1,36 @@
+.studies {
+    width: 100%;
+    background: #f3f3f3;
+}
+
+#studies-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 25px 0;
+}
+
+.studies-item {
+    margin: 25px 20px;
+}
+
+.studies-item span {
+    display: block;
+}
+
+.studies-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.studies-company {
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+@media (max-width: 768px) {
+    .studies-item {
+        margin-right: auto;
+    }
+}

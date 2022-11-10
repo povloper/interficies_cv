@@ -1,0 +1,44 @@
+body, * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Ubuntu, "times new roman", times, roman, serif;
+    color: rgb(56, 56, 56);
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu'), url(http://example.com/fonts/ubuntu.woff) format('woff');
+}
+
+.container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.util-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.primary-color {
+    color: #827ffe !important;
+}
+
+.white-color {
+    color: #E6E6E6 !important;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.mt-30 {
+    margin-top: 50px;
+}

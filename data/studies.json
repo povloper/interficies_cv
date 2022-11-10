@@ -1,0 +1,23 @@
+[
+    {
+        "center": "Universitat de Girona",
+        "study": "Software Engineering",
+        "from": "2020",
+        "to": "2024*",
+        "site": "Girona"
+    },
+    {
+        "center": "INS Cirviànum",
+        "study": "DAW - Web App Development",
+        "from": "2018",
+        "to": "2020",
+        "site": "Torelló"
+    },
+    {
+        "center": "INS Cirviànum",
+        "study": "SMX - Microcomputer Systems and Networks",
+        "from": "2016",
+        "to": "2018",
+        "site": "Torelló"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Fòrum industrial",
+        "url": "https://forum.udg.edu",
+        "src": "forum.jpg",
+        "description": "Website of the Fòrum Industrial project of the University of Girona. It is made with Angular2. Currently it is a web with static data, but for the next edition it will have a backend with Laravel so that the configuration is by interface instead of JSON files. In addition, we are going to digitize many things, mainly for the companies participating in the project."
+    },
+    {
+        "title": "TIMESET",
+        "url": "https://timeset.joseppou.tk",
+        "src": "timeset.jpg",
+        "description": "Project created with Angular2 and Laravel. It is an application to store data dynamically according to the needs of the company. There are permissions for groups, roles and individual users on the forms and for each form field (read and/or write).\nYou can see the entire documentation at the following link: <a url='timeset.joseppou.tk/docs.pdf' target='_blank'>timeset.joseppou.tk/docs.pdf</a>"
+    }
+]

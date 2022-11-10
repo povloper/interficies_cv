@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Web Developer",
+        "company": "DSET Solutions",
+        "from": "September 2022",
+        "to": "now",
+        "site": "Girona"
+    },
+    {
+        "title": "Web Developer",
+        "company": "Fòrum Industrial",
+        "from": "March 2021",
+        "to": "now",
+        "site": "Girona"
+    },
+    {
+        "title": "Web Developer",
+        "company": "Doceo Software",
+        "from": "May 2021",
+        "to": "October 2021",
+        "site": "Girona"
+    },
+    {
+        "title": "Web Developer",
+        "company": "Ciclick - Web Solutions",
+        "from": "March 2019",
+        "to": "September 2020",
+        "site": "Vic"
+    }
+]
