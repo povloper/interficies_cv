@@ -110,7 +110,7 @@ function printProjects() {
     projects.forEach(p => {
         message += `
             <div class="projects-item" onclick="goTo('${p.url}')">
-                <div class="projects-item-image" style="background-image: url('../img/${p.src}');"></div>
+                <div class="projects-item-image" style="background-image: url('./img/${p.src}');"></div>
                 <div class="projects-info">
                     <span class="projects-title">${p.title}</span>
                     <span class="projects-description">${p.description}</span>
