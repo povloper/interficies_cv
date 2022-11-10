@@ -11,17 +11,17 @@ var experience;
 var projects;
 var studies;
 
-document.addEventListener("DOMContentLoaded", function() { 
-   loadComponents();
+document.addEventListener("DOMContentLoaded", async function() { 
+   await loadComponents();
    getData();
 })
 
 /**
  * It loops through the components array and adds each component to the DOM.
  */
-function loadComponents() {
+async function loadComponents() {
     components.forEach(component => {
-        addComponent(component.id, "./pages/" + component.file);
+        await addComponent(component.id, "./pages/" + component.file);
     });
 }
 
