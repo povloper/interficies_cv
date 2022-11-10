@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async function() {
  * It loops through the components array and adds each component to the DOM.
  */
 async function loadComponents() {
-    components.forEach(component => {
+    await components.forEach(async function (component) {
         await addComponent(component.id, "./pages/" + component.file);
     });
 }
