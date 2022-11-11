@@ -11,17 +11,17 @@ var experience;
 var projects;
 var studies;
 
-document.addEventListener("DOMContentLoaded", function() { 
-   loadComponents();
+document.addEventListener("DOMContentLoaded", async function() { 
+   await loadComponents();
    getData();
 })
 
 /**
  * It loops through the components array and adds each component to the DOM.
  */
-function loadComponents() {
-    components.forEach(component => {
-        addComponent(component.id, "./pages/" + component.file);
+async function loadComponents() {
+    await components.forEach(async function (component) {
+        await addComponent(component.id, "./pages/" + component.file);
     });
 }
 
@@ -34,6 +34,7 @@ function loadComponents() {
 async function addComponent(id, file) {
     const resp = await fetch(file);
     const html = await resp.text();
+    console.log("got id ", id);
     document.getElementById(id).innerHTML = html;
 }
 
@@ -63,6 +64,7 @@ async function getExperienceData() {
         .then(response => response.json())
         .then(data => experience = data)
         .catch(error => console.log(error));
+        console.log("got experience ");
     printExperience();
 }
 
@@ -70,7 +72,7 @@ async function getExperienceData() {
  * It takes the data from the experience array and prints it to the page.
  */
 function printExperience() {
-    let experience_container = document.getElementById("experience-container");
+    let experience_container = getContainer("experience-container");
     let message = '<div id="experience-container">';
     experience_container.innerHTML = '';
     experience.forEach(e => {
@@ -96,6 +98,7 @@ async function getProjectseData() {
         .then(response => response.json())
         .then(data => projects = data)
         .catch(error => console.log(error));
+        console.log("got projecs ");
     printProjects();
 }
 
@@ -104,13 +107,13 @@ async function getProjectseData() {
  * projects-container div.
  */
 function printProjects() {
-    let projects_container = document.getElementById("projects-container");
+    let projects_container = getContainer("projects-container");
     let message = '<div id="projects-container">';
     projects_container.innerHTML = '';
     projects.forEach(p => {
         message += `
             <div class="projects-item" onclick="goTo('${p.url}')">
-                <div class="projects-item-image" style="background-image: url('../img/${p.src}');"></div>
+                <div class="projects-item-image" style="background-image: url('./img/${p.src}');"></div>
                 <div class="projects-info">
                     <span class="projects-title">${p.title}</span>
                     <span class="projects-description">${p.description}</span>
@@ -130,6 +133,7 @@ async function getStudiesData() {
         .then(response => response.json())
         .then(data => studies = data)
         .catch(error => console.log(error));
+        console.log("got studies ");
     printStudies()
 }
 
@@ -137,7 +141,7 @@ async function getStudiesData() {
  * It takes the data from the studies array and prints it to the page.
  */
 function printStudies() {
-    let studies_container = document.getElementById("studies-container");
+    let studies_container = getContainer("studies-container");
     let message = '<div id="studies-container">';
     studies_container.innerHTML = '';
     studies.forEach(s => {
@@ -152,4 +156,14 @@ function printStudies() {
     })
     
     studies_container.innerHTML += message + '</div>';
+}
+
+/**
+ * It waits for the element with the id of "name" to be created.
+ * @param name - The name of the container you want to get.
+ * @returns the element with the id of name.
+ */
+function getContainer(name) {
+    while(!document.getElementById(name)) {  }
+    return document.getElementById(name);
 }
