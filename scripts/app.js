@@ -13,7 +13,9 @@ var studies;
 
 document.addEventListener("DOMContentLoaded", async function() { 
    await loadComponents();
-   getData();
+   setTimeout(() => {
+    getData();
+   }, 200);
 })
 
 /**
@@ -164,6 +166,5 @@ function printStudies() {
  * @returns the element with the id of name.
  */
 function getContainer(name) {
-    while(!document.getElementById(name)) {  }
     return document.getElementById(name);
 }
